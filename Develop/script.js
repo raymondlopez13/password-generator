@@ -31,7 +31,7 @@ function generatePassword() {
     arr.push('0123456789');
   } 
   if (specialChar === true) {
-    arr.push('!#$&')
+    arr.push(' !"#$%&\')(*+,-./;:<=>?@[\\]^_`{|}~')
   }
   console.log(arr);
   var password = [];
