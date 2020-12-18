@@ -22,18 +22,26 @@ function generatePassword() {
   }
   var arr = [];
   if (lowercase === true) {
-    arr.push('lower');
+    arr.push('abcdefghijklmnopqrstuvwxyz');
   } 
   if (uppercase === true) {
-    arr.push('upper');
+    arr.push('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
   } 
   if (numbers === true) {
-    arr.push('number');
+    arr.push('0123456789');
   } 
   if (specialChar === true) {
-    arr.push('special character')
+    arr.push('!#$&')
   }
   console.log(arr);
+  var password = [];
+  for (i=0; i < passwordLength; i++){
+    let rando = Math.floor(Math.random() * arr.length);
+    let arrRando = Math.floor(Math.random() * arr[rando].length);
+    password.push(arr[rando][arrRando]);
+  }
+  password = password.join('');
+  return password;
 }
 
 // Get references to the #generate element
