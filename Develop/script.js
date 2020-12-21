@@ -18,7 +18,7 @@ function generatePassword() {
   specialChar = confirm("Are you sure?");
   if (lowercase === false && uppercase === false && numbers === false && specialChar === false){
     alert('I cannot create a password made of nothing!');
-    generatePassword();
+    location.reload();
   }
   var arr = [];
   if (lowercase === true) {
